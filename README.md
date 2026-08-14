@@ -1,13 +1,224 @@
 Neural Network From Scratch with NumPy
 
-A compact implementation of a feed-forward neural network built from scratch using NumPy, without using high-level deep-learning frameworks such as TensorFlow, PyTorch, or Keras.
+A from-scratch implementation of a feed-forward neural network using NumPy, without relying on high-level deep-learning frameworks such as TensorFlow, PyTorch, or Keras.
 
-The project uses the scikit-learn Digits dataset to demonstrate the fundamental components of neural-network training, including forward propagation, backpropagation, mini-batch gradient descent, activation functions, loss computation, and model evaluation.
+The project uses the scikit-learn Digits dataset to demonstrate the mathematical and computational foundations of neural-network training, including forward propagation, backpropagation, activation functions, cross-entropy loss, mini-batch gradient descent, parameter optimization, and model evaluation.
+
+""Open In Colab" (https://colab.research.google.com/assets/colab-badge.svg)" (https://colab.research.google.com/drive/1srK6Lq_pBP4Vjjh7PmjGML9aNamFS0mp?usp=sharing)
+
+---
 
 🎯 Objective
 
-The goal of this project was to understand the mechanics of a neural network by implementing the core training pipeline directly with NumPy rather than relying on a deep-learning framework.
+The primary objective of this project was to understand how a neural network learns by implementing its core computational pipeline directly with NumPy rather than using an existing deep-learning framework.
 
+The project investigates the following question:
+
+«Can a small neural network implemented from first principles learn handwritten digit classification effectively?»
+
+The implementation focuses on understanding the mathematical relationship between:
+
+Input → Forward Propagation → Loss → Gradients → Backpropagation → Parameter Update
+
+---
+
+🧠 Model Architecture
+
+The model is a simple Multilayer Perceptron (MLP):
+
+8 × 8 Input Image
+       ↓
+  64 Input Features
+       ↓
+  128 Hidden Neurons
+       ↓
+   ReLU Activation
+       ↓
+  10 Output Neurons
+       ↓
+      Softmax
+       ↓
+ Digit Prediction (0–9)
+
+Implemented from scratch
+
+- Xavier parameter initialization
+- Forward propagation
+- ReLU activation
+- Softmax output layer
+- Cross-entropy loss
+- Backpropagation
+- Mini-batch gradient descent
+- Parameter updates
+- Training/validation monitoring
+
+No high-level neural-network training API was used.
+
+---
+
+📊 Dataset
+
+The experiment uses the Digits dataset provided by scikit-learn.
+
+Property| Value
+Samples| 1,797
+Image dimensions| 8 × 8
+Input features| 64
+Classes| 10
+Classes| Digits 0–9
+
+The images are flattened into 64-dimensional feature vectors and the input features are standardized before training.
+
+---
+
+⚙️ Training Configuration
+
+The experiment was conducted using the following configuration:
+
+Parameter| Value
+Hidden units| 128
+Epochs| 40
+Learning rate| 0.01
+Random seed| 42
+Batch training| Mini-batch
+Output classes| 10
+
+The dataset is separated into training, validation, and test sets to evaluate both optimization progress and generalization.
+
+---
+
+📈 Results
+
+The trained neural network achieved:
+
+Test Accuracy: 93.89%
+
+Validation accuracy reached approximately 93.61% during training.
+
+The training process showed a consistent reduction in loss while validation accuracy improved through most of the optimization process, indicating that the network successfully learned useful representations of the handwritten digits.
+
+Evaluation artifacts
+
+The experiment produces:
+
+- Training curve
+- Validation metrics
+- Confusion matrix
+- Classification report
+- Saved model parameters
+- Training metadata
+
+These artifacts are available in the ""results/"" (results/) directory.
+
+---
+
+🔬 Why Build a Neural Network From Scratch?
+
+Modern deep-learning frameworks make it possible to train neural networks with only a few lines of code. However, these abstractions can hide many of the mathematical operations involved in learning.
+
+Implementing the model directly with NumPy provides a clearer understanding of:
+
+- Matrix multiplication
+- Activation functions
+- Probability distributions
+- Loss functions
+- Gradient computation
+- Chain-rule-based backpropagation
+- Parameter optimization
+- Mini-batch training
+
+This project was therefore designed primarily as an exploration of the mathematical and computational foundations of neural networks.
+
+---
+
+🧪 Reproducibility
+
+Random seeds are explicitly controlled to make the experiment reproducible.
+
+The repository also stores relevant experiment metadata and model artifacts generated during training.
+
+---
+
+🚀 Running the Project
+
+Google Colab
+
+The notebook can be opened directly in Google Colab:
+
+""Open In Colab" (https://colab.research.google.com/assets/colab-badge.svg)" (https://colab.research.google.com/drive/1srK6Lq_pBP4Vjjh7PmjGML9aNamFS0mp?usp=sharing)
+
+Local environment
+
+Clone the repository:
+
+git clone https://github.com/showravj2-create/neural-network-from-scratch.git
+cd neural-network-from-scratch
+
+Install the required dependencies:
+
+pip install -r requirements.txt
+
+Then open:
+
+neural_network_from_scratch.ipynb
+
+using Jupyter Notebook or JupyterLab.
+
+---
+
+📁 Repository Structure
+
+neural-network-from-scratch/
+│
+├── README.md
+├── neural_network_from_scratch.ipynb
+├── requirements.txt
+├── LICENSE
+│
+└── results/
+    ├── training_curve.png
+    ├── confusion_matrix.png
+    ├── classification_report.txt
+    ├── metadata.json
+    └── model.npz
+
+---
+
+🛠️ Technologies
+
+- Python
+- NumPy
+- scikit-learn
+- Matplotlib
+- Jupyter Notebook
+- Google Colab
+
+---
+
+🔭 Future Improvements
+
+Possible extensions include:
+
+- Comparing the NumPy implementation with PyTorch
+- Implementing additional optimizers such as Adam
+- Adding L2 regularization
+- Experimenting with different network architectures
+- Performing systematic hyperparameter experiments
+- Implementing learning-rate scheduling
+- Comparing different activation functions
+- Evaluating the model on larger datasets
+
+---
+
+👤 Author
+
+Showrav Das
+
+Mathematics graduate interested in:
+
+Machine Learning • Deep Learning • Computer Vision • Natural Language Processing
+
+GitHub: "@showravj2-create" (https://github.com/showravj2-create)
 The project focuses on the question:
 
 «Can a small neural network implemented from first principles effectively learn handwritten digit classification?»

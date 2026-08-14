@@ -4,7 +4,7 @@ A from-scratch implementation of a feed-forward neural network using NumPy, with
 
 The project uses the scikit-learn Digits dataset to demonstrate the mathematical and computational foundations of neural-network training, including forward propagation, backpropagation, activation functions, cross-entropy loss, mini-batch gradient descent, parameter optimization, and model evaluation.
 
-[Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)[(https://colab.research.google.com/drive/1srK6Lq_pBP4Vjjh7PmjGML9aNamFS0mp?usp=sharing)]
+[[!Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1srK6Lq_pBP4Vjjh7PmjGML9aNamFS0mp?usp=sharing)
 
 ---
 

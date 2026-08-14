@@ -1,0 +1,8 @@
+{
+  "trained_at": "2026-08-14T17:46:08.353827Z",
+  "test_accuracy": 0.9388888888888889,
+  "n_train": 1257,
+  "model_file": "out/model.npz",
+  "training_plot": "out/training_plots.png",
+  "confusion_plot": "out/confusion_matrix.png"
+}

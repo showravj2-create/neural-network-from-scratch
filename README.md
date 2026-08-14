@@ -121,7 +121,7 @@ Clone the repository:
 
 git clone https://github.com/showravj2-create/neural-network-from-scratch/blob/main/neural_network_from_scratch.ipynb
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/showravj2-create/neural-network-from-scratch/blob/main/neural_network_from_scratch.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1srK6Lq_pBP4Vjjh7PmjGML9aNamFS0mp?usp=sharing)
 
 Install the dependencies:
 

@@ -119,8 +119,7 @@ The project records relevant training information and model metadata as part of 
 
 Clone the repository:
 
-git clone https://github.com/showravj2-create/neural-network-from-scratch.git
-cd neural-network-from-scratch
+git clone https://github.com/showravj2-create/neural-network-from-scratch/blob/main/neural_network_from_scratch.ipynb
 
 Install the dependencies:
 
